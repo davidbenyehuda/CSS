@@ -1,19 +1,24 @@
 <!DOCTYPE html>
-<html title="hello world">
+<html>
 <head>
-      <meta charset="utf-8">
-      <script type="text/javascript">
-        startTime = new Date().getTime();
-      </script>
-      <script type="text/javascript" src="//unpkg.com/jb-react@0.5.9/dist/jb-react-all.js"></script>
+  <meta charset="utf-8">
+  <link rel="icon" type="image/png" href="//unpkg.com/jb-react@0.5.4/bin/studio/css/favicon.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script type="text/javascript">
+    startTime = new Date().getTime();
+  </script>
+<!-- start-jb-scripts -->
+<link rel="stylesheet" type="text/css" href="//unpkg.com/jb-react/dist/css/styles.css"/>
+<script type="text/javascript" src="//unpkg.com/jb-react/dist/jb-react-all.js"></script>
 <script type="text/javascript" src="//unpkg.com/jb-react/dist/material.js"></script><link rel="stylesheet" type="text/css" href="//unpkg.com/jb-react/dist/material.css"/>
-<script type="text/javascript" src="let_me_c.js"></script>
+<script type="text/javascript" src="LetMeC.js"></script>
 
-    </head>
+<!-- end-jb-scripts -->
+</head>
 <body>
-<div id="main"> </div>
-<script>
-  jb.ui.renderWidget({$:'let_me_c.main'},document.getElementById('main'))
-</script>
+  <div id="main"> </div>
+  <script>
+    jb.ui.renderWidget({$:'LetMeC.main'},document.getElementById('main'))
+  </script>
 </body>
 </html>

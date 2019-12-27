@@ -1,10 +1,19 @@
 jb.ns('LetMeC')
 
-jb.component('LetMeC.main', { 
+jb.component('LetMeC.main', { /* LetMeC.main */
   type: 'control',
   impl: group({
     layout: layout.vertical(),
     controls: [
+      group({
+        title: 'upload file',
+        controls: [
+          html({
+            title: 'html',
+            html: '<form  method=\"post\">   <input type=\"file\" name=\"fileToUpload\" id=\"fileToUpload\"><br>   <input type=\"submit\" value=\"Submit\"> </form>'
+          })
+        ]
+      }),
       group({
         title: 'details',
         layout: layout.horizontal('10'),
@@ -57,7 +66,7 @@ Content-Disposition: form-data; name="submit"
 -----------------------------18467633426500--`,
                 useProxy: 'cloud'
               }),
-              LetMeC.resultParser(),
+            LetMeC.resultParser(),
             first()
           )
         )
