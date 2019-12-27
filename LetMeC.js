@@ -1,7 +1,6 @@
-jb.ns('let_me_c')
+jb.ns('LetMeC')
 
-
-jb.component('let_me_c.main', { 
+jb.component('LetMeC.main', { 
   type: 'control',
   impl: group({
     layout: layout.vertical(),
@@ -32,27 +31,33 @@ jb.component('let_me_c.main', {
                 ),
                 body: `-----------------------------18467633426500
 Content-Disposition: form-data; name="ID"
+
 %$tech/ID%
 -----------------------------18467633426500
 Content-Disposition: form-data; name="Hwn"
+
 %$tech/Hwn%
 -----------------------------18467633426500
 Content-Disposition: form-data; name="Ques"
+
 %$tech/Ques%
 -----------------------------18467633426500
 Content-Disposition: form-data; name="MAX_FILE_SIZE"
+
 80480
 -----------------------------18467633426500
 Content-Disposition: form-data; name="hw"; filename="hw%$tech/Hwn%q%$tech/Ques%.c"
 Content-Type: text/plain
+
 %$tech/program%
 -----------------------------18467633426500
 Content-Disposition: form-data; name="submit"
+
 שלח
 -----------------------------18467633426500--`,
                 useProxy: 'cloud'
               }),
-              technionFun.resultParser(),
+              LetMeC.resultParser(),
             first()
           )
         )
@@ -87,7 +92,10 @@ jb.component('data-resource.tech', { /* dataResource.tech */
 }`,
     result: [
       `
+
 <hr />
+
+
  שלום 212172027 להלן הפלט לתרגיל בית 1 שאלה מספר 1
 <br />ארעה שגיאת קומפילצייה בתרגיל שלך <br />פירוט של השגיאה:<br />	<textarea dir="ltr" style="width:800px;height:120px">
 	hw1q1.c:1:1: error: unknown type name 'function'
@@ -99,13 +107,14 @@ hw1q1.c:2:4: error: implicit declaration of function 'printf' [-Werror=implicit-
 ^
 hw1q1.c:2:4: error: incompatible implicit declaration of built-in function 'printf' [-Werror]
 s
+
 		</textarea>
 `
     ]
   }
 })
 
-jb.component('let_me_c.result-parser', { /* technionFun.resultParser */
+jb.component('-let-me-c.result-parser', { /* let-me-c.resultParser */
   type: 'data',
   impl: pipeline(
     split({separator: '</form>', part: 'last'}),
